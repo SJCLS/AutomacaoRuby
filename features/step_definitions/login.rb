@@ -1,14 +1,15 @@
-
-Dado('que eu tenha um usuario') do |table|
-  @email = table.rows_hash['email']
+Dado('que eu tenha um usuário') do |table|
+  @usuario = table.rows_hash['email']
   @senha = table.rows_hash['senha']
-  visit('https://cursos.alura.com.br/loginForm?urlAfterLogin=https://cursos.alura.com.br/dashboard')
+  visit('https://cursos.alura.com.br/loginForm')
 end
 
-Quando('eu faca login') do
-
+Quando('eu faço login') do
+  fill_in 'email', with: @usuario
+  fill_in 'password', with: @senha
+  click_button 'Entrar'  
 end
 
-Entao('eu verificar se estou logado') do
-
+Então('eu verifico se estou logado com sucesso') do
+  expect(page).to have_content('Bem-vindo')
 end
