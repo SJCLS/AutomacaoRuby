@@ -7,7 +7,7 @@ Funcionalidade: Fazer login
 
 Cenario: Fazer login com sucesso.
 Dado que eu tenha um usuario  
-|email| nicollas.oliveira2203@gmail.com |
-|senha|!@Nicollas!@|
+|email| usuario@gmail.com |
+|senha|!@Senha@!|
 Quando eu faca login 
 Entao eu verificar se estou logado
