@@ -1,5 +1,4 @@
 # spec/spec_helper.rb
-
 require 'selenium-webdriver'
 require_relative '../config/setup' # Carrega a configuração do driver
 
@@ -9,6 +8,6 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-    @driver.quit
+    @driver.quit # Fecha o driver após cada teste
   end
 end

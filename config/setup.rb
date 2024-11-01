@@ -1,3 +1,4 @@
+# config/setup.rb
 require 'selenium-webdriver'
 
 def setup_driver
